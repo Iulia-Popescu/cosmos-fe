@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Ticket number {{ticket?.id}}</h1>
+
+  <h2 *ngIf="ticket?.hasSuperzahl">
+    Superzahl: {{ticket?.superzahl}}
+  </h2>
+
+  <div class="boxes">
+    <div *ngFor="let box of ticket?.boxes">
+      <div *ngFor="let row of grid; let i = index" class="row">
+        <div *ngFor="let num of row; let j = index"
+             class="cell"
+             [ngClass]="box.includes(grid[i][j]) ? 'mark' : ''">{{ num }}</div>
+      </div>
+    </div>
+  </div>
+</div>

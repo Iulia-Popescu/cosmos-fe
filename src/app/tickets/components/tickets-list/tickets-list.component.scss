@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ticket-form {
+  mat-form-field {
+    width: 30%;
+    margin-bottom: 16px;
+  }
+
+  mat-checkbox {
+    margin-bottom: 8px;
+  }
+}
+
+table {
+  tr:not(th):hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+
+  th {
+    background-color: white;
+    cursor: default;
+  }
+}
+
+.plot-container {
+  display: flex;
+  justify-content: center;
+}
