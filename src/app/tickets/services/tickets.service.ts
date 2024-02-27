@@ -27,7 +27,7 @@ export class TicketsService {
       );
   }
 
-  public getTicketsPage(page: number, pageSize: number): Observable<any> { // TODO define the response type
+  public getTicketsPage(page: number, pageSize: number): Observable<any> {
     return this.httpClient
       .get<any>(`${this.API_URL}/tickets-page`, {
         params: {
@@ -42,7 +42,7 @@ export class TicketsService {
       );
   }
 
-  public getTicketDetails(id: string): Observable<Ticket | undefined> { // TODO define the response type
+  public getTicketDetails(id: string): Observable<Ticket | undefined> {
     return this.httpClient
       .get<Ticket>(`${this.API_URL}/ticket/${id}`)
       .pipe(
@@ -53,9 +53,9 @@ export class TicketsService {
 
   }
 
-  public getFrequency(): Observable<Frequency | undefined> { // TODO define the response type
+  public getFrequency(): Observable<Frequency | undefined> {
     return this.httpClient
-      .get<any>(`${this.API_URL}/frequency`)
+      .get<Frequency>(`${this.API_URL}/frequency`)
       .pipe(
         catchError(() => {
           return of(undefined);
