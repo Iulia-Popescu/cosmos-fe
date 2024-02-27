@@ -4,7 +4,6 @@ import {ActivatedRoute} from '@angular/router';
 import {Ticket} from '../../models/ticket.model';
 import {TicketsService} from '../../services/tickets.service';
 
-
 @Component({
   selector: 'app-ticket-details',
   templateUrl: './ticket-details.component.html',

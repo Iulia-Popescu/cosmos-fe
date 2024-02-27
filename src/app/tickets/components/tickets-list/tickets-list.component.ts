@@ -4,16 +4,14 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import {Router} from '@angular/router';
 
-import {BehaviorSubject, map, Observable, switchMap, tap} from 'rxjs';
+import {BehaviorSubject, map, Observable, switchMap} from 'rxjs';
 
 import {Ticket} from '../../models/ticket.model';
 import {TicketsService} from '../../services/tickets.service';
-import {Frequency} from '../../models/frequency.model';
 
 import * as PlotlyJS from 'plotly.js-dist-min';
 import { PlotlyModule } from 'angular-plotly.js';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {tick} from '@angular/core/testing';
 
 PlotlyModule.plotlyjs = PlotlyJS;
 

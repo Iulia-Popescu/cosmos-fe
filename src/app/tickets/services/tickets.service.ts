@@ -21,7 +21,7 @@ export class TicketsService {
         hasSuperzahl: ticket.hasSuperzahl,
       })
       .pipe(
-        catchError((error) => {
+        catchError(() => {
           return of(undefined);
         })
       );
